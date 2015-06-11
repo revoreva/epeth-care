@@ -58,19 +58,19 @@
         diagnosa[3]--;
         diagnosa[5]--;
       }
-      function plusDemam() {
+      function plusDiare() {
         diagnosa[3]++;
         diagnosa[4]++;
         diagnosa[5]++;
       }
-      function minusDemam() {
+      function minusDiare() {
         diagnosa[3]--;
         diagnosa[4]--;
         diagnosa[5]--;
       }
       function checkDiagnosa () {
         temp = -1;
-        var idx;
+        var idx = 1;
         for (var i = 1; i <= 5; i++) {
           diagnosa[i] /= kapasitas[i];
           val[i] = diagnosa[i];
@@ -90,17 +90,11 @@
       }
     */
       function next () {
-        if (checkDiagnosa() == 1) {
-          window.location.href = "hasil1.html";
-        } else if (checkDiagnosa() == 2) {
-          window.location.href = "hasil2.html";
-        } else if (checkDiagnosa() == 3) {
-          window.location.href = "hasil3.html";
-        } else if (checkDiagnosa() == 4) {
-          window.location.href = "hasil4.html";
-        } else {
-          window.location.href = "hasil5.html";
-        } 
+        var idx = checkDiagnosa();
+        //alert(idx);
+        getResultPenyakit(idx);
+        //alert("yeah");
+        //window.location.href = "hasil.html";
       }
     </script>
 	</head>
@@ -129,6 +123,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="cek.html">Cek Hewan</a></li>
               <li><a href="tentang.html">Tentang kami</a></li>
+              <li><a href="../index.html">Logout</a></li>
             </ul>
            </div>
         </div><!--/sidebar-->
@@ -139,80 +134,8 @@
            	 <div class="col-sm-12">
                 <div class="panel panel-default">
                    <div class="panel-heading"><h4>Checklist Kondisi Kesehatan</h4></div>
-                    <div class="panel-body">
-                      <ul class="list-group">
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                          <button class="btn btn-xs btn-default" onclick="plusDiagnosa1()">Ya</button>
-                          <button class="btn btn-xs btn-primary active" onclick="minusDiagnosa1()">Tidak</button>
-                          </span>  
-                          Berjalan menyeret anus</li>
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                            <button class="btn btn-xs btn-default" onclick="plusDiagnosa1()">Ya</button>
-                            <button class="btn btn-xs btn-primary active" onclick="minusDiagnosa1()">Tidak</button>
-                            </span> Berguling atau menggigit bagian perut</li>
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                            <button class="btn btn-xs btn-default" onclick="plusDiagnosa1()">Ya</button>
-                            <button class="btn btn-xs btn-primary active" onclick="minusDiagnosa1()">Tidak</button>
-                            </span> Konvulsi</li>
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                            <button class="btn btn-xs btn-default" onclick="plusDiagnosa1()">Ya</button>
-                            <button class="btn btn-xs btn-primary active" onclick="minusDiagnosa1()">Tidak</button>
-                            </span> Gejala Menyerupai Epilepsi</li>
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                            <button class="btn btn-xs btn-default" onclick="plusDiagnosa2()">Ya</button>
-                            <button class="btn btn-xs btn-primary active" onclick="minusDiagnosa2()">Tidak</button>
-                            </span> Menggaruk dan menggosok pada benda keras</li>
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                            <button class="btn btn-xs btn-default" onclick="plusDiagnosa2()">Ya</button>
-                            <button class="btn btn-xs btn-primary active" onclick="minusDiagnosa2()">Tidak</button>
-                            </span> Kerusakan kulit pada moncong, leher, bahu, telinga, permukaan paha, punggung, kaki, dan pangkal ekor</li>
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                            <button class="btn btn-xs btn-default" onclick="plusDemam()">Ya</button>
-                            <button class="btn btn-xs btn-primary active" onclick="minusDemam()">Tidak</button>
-                            </span> Demam</li>
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                            <button class="btn btn-xs btn-default" onclick="plusDiagnosa3()">Ya</button>
-                            <button class="btn btn-xs btn-primary active" onclick="minusDiagnosa3()">Tidak</button>
-                            </span> Sakit pada otot-otot</li>
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                            <button class="btn btn-xs btn-default" onclick="plusDiagnosa3()">Ya</button>
-                            <button class="btn btn-xs btn-primary active" onclick="minusDiagnosa3()">Tidak</button>
-                            </span> lamban / kurang bersemangat</li>
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                            <button class="btn btn-xs btn-default" onclick="plusDiare()">Ya</button>
-                            <button class="btn btn-xs btn-primary active" onclick="minusDiare()">Tidak</button>
-                            </span> Diare</li>
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                            <button class="btn btn-xs btn-default" onclick="plusDiagnosa4()">Ya</button>
-                            <button class="btn btn-xs btn-primary active" onclick="minusDiagnosa4()">Tidak</button>
-                            </span> Muntah</li>
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                            <button class="btn btn-xs btn-default" onclick="plusDiagnosa4()">Ya</button>
-                            <button class="btn btn-xs btn-primary active" onclick="minusDiagnosa4()">Tidak</button>
-                            </span> Berak Darah</li>
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                            <button class="btn btn-xs btn-default" onclick="plusDiagnosa5()">Ya</button>
-                            <button class="btn btn-xs btn-primary active" onclick="minusDiagnosa5()">Tidak</button>
-                            </span> Sesak napas</li>
-                        <li class="list-group-item">
-                          <span href="#" class="btn-group btn-toggle pull-right"> 
-                            <button class="btn btn-xs btn-default" onclick="plusDiagnosa5()">Ya</button>
-                            <button class="btn btn-xs btn-primary active" onclick="minusDiagnosa5()">Tidak</button>
-                            </span> Pembekakak pada kelenjar</li>
-                      </ul>
+                    <div class="panel-body" id="pertanyaan">
+                      
                     </div><!--/panel-body-->
                  </div><!--/panel-->
                  <div align="right">
