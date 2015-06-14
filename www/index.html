@@ -22,20 +22,41 @@
 	<!-- top navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     	<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
            <a class="navbar-brand" href="#">EPETH CARE</a>
     	</div>
     </nav>
       
     <div class="container-fluid">
       <div class="row row-offcanvas row-offcanvas-left">
-  	
+		
+		<!--sidebar-->
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div data-spy="affix" data-offset-top="45" data-offset-bottom="90">
+            <ul class="nav" id="sidebar-nav">
+              <li><a href="index.html">Login</a></li>
+              <li><a href="tentang.html">Tentang kami</a></li>
+            </ul>
+           </div>
+        </div><!--/sidebar-->
+		
         <!--/main-->
         <div class="col-xs-12 col-sm-9" data-spy="scroll" data-target="#sidebar-nav">
           <div class="row">
            	 <div class="col-sm-12">             
-                <div class="well"> 
+                <div class="well">
+				<center>
+					<h3>Welcome to EPETH CARE</h3>
+					<br><br>
+					<img src="img/epeth.png" width="40%">
+				</center>
+				<br><br>
                  <form class="form-horizontal" role="form">
-                  <h4>Login</h4>
+                  <h4>Silahkan login terlebih dahulu</h4>
                     <div class="form-group" style="padding:14px;">
                       <input type="text" id="username" class="form-control" placeholder="Username">
                       <input type="password" id="password" class="form-control" placeholder="Password">
