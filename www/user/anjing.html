@@ -21,6 +21,9 @@
       function next () {
         window.location.href = "checklist.html";
       }
+      function keluar () {
+        navigator.app.exitApp();
+      }
     </script>
 	</head>
 	<body>
@@ -48,7 +51,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="cek.html">Cek Hewan</a></li>
               <li><a href="tentang.html">Tentang kami</a></li>
-              <li><a href="../index.html">Logout</a></li>
+              <li><a href="#" onclick="keluar()">Keluar</a></li>
             </ul>
            </div>
         </div><!--/sidebar-->

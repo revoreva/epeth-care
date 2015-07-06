@@ -96,6 +96,9 @@
         //alert("yeah");
         //window.location.href = "hasil.html";
       }
+      function keluar () {
+        navigator.app.exitApp();
+      }
     </script>
 	</head>
 	<body>
@@ -123,7 +126,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="cek.html">Cek Hewan</a></li>
               <li><a href="tentang.html">Tentang kami</a></li>
-              <li><a href="../index.html">Logout</a></li>
+              <li><a href="#" onclick="keluar()">Keluar</a></li>
             </ul>
            </div>
         </div><!--/sidebar-->

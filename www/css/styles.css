@@ -93,6 +93,13 @@ a {
   color:#ffffff;
 }
 
+.icon {
+  /*
+  border-radius: 100%;
+  border:1px solid #dddddd;
+  */
+}
+
 /* collapsed sidebar styles */
 @media screen and (max-width: 767px) {
   .row-offcanvas {

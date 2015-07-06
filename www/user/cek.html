@@ -19,6 +19,18 @@
         window.location.href = "anjing.html";
       }
     </script>
+    <script type="text/javascript">
+      document.addEventListener("deviceready", onDeviceReady, false);
+
+      function onDeviceReady(){
+          document.addEventListener("backbutton", function(e){
+             window.location.href="index.html";
+          }, false);
+      }
+      function keluar () {
+        navigator.app.exitApp();
+      }
+    </script>
 	</head>
 	<body>
 <div class="page-container">
@@ -45,7 +57,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="cek.html">Cek Hewan</a></li>
               <li><a href="tentang.html">Tentang kami</a></li>
-              <li><a href="../index.html">Logout</a></li>
+              <li><a href="#" onclick="keluar()">Keluar</a></li>
             </ul>
            </div>
         </div><!--/sidebar-->
