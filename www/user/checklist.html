@@ -6,6 +6,7 @@
 		<title>Selamat Datang User</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="../cordova.js"></script>
 		<link href="../css/bootstrap.min.css" rel="stylesheet">
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -17,6 +18,14 @@
     <script type="text/javascript">
 
       window.onload = getPertanyaan;
+
+      document.addEventListener("deviceready", onDeviceReady, false);
+
+      function onDeviceReady(){
+          document.addEventListener("backbutton", function(e){
+             window.location.href = "index.html";
+          }, false);
+      }
 
       var diagnosa = [0,0,0,0,0,0], val = [0,0,0,0,0,0], kapasitas = [0,4,2,4,3,4], temp;
 
